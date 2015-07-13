@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular inbuilt filter examples</title>
+	<script src="angular.min.js"></script>
+	<script src="filter/MyFilterApp.js"></script>
+	
+<head>
+<body>
+	<div ng-app="MyFilterApp" ng-controller="MyFilterCtrl">
+		<p>Consumption : {{myData.consumption | number:2}}<p>
+
+		<p>{{myData.dateJoined | date:'medium'}}</p>
+		<p>{{myData.dateJoined | date:'mediumDate'}}</p>
+		<p>{{myData.dateJoined | date:'shortDate'}}</p>
+		<ul>
+			<li ng-repeat="gigabytes in myData.monthlyUsageHistory  track by $index | limitTo:5">{{ gigabytes | number:2}}</li>
+		</ul>
+<p>{{'World'|greet}}</p>
+
+<input type="text" ng-model="search.val" />
+<p ng-repeat="user in users">{{ user }}</p>
+<p ng-repeat="gigabytes in myData.monthlyUsageHistory">{{ myData.monthlyUsageHistory }}</p>
+	</div>
+
+</body>
+</html>

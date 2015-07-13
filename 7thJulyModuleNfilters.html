@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="angular.min.js"></script>
+	<script src="ModuleNfilterApp.js"></script>
+</head>
+<body >
+	<div  ng-app="myModApp" ng-controller="myModAppCtrl">
+		<p>Module and filter App</p>
+	<ul>
+		<li ng-repeat="isData in data.monthlyUsageHistory | limitTo:5">{{ isData | number:2}}</li>
+	</ul>	
+
+	<ul>
+<li ng-repeat="isData in data.monthlyUsageHistory | limitTo:7">{{ isData}}</li>
+	</ul>
+
+	</div>
+	
+
+</body>
+
+</html>
